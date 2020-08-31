@@ -1,9 +1,26 @@
-/*
-	创建数据库：create database   数据库名；
-					create database 数据库名  character set 字符集；
-	查看所有数据库：show databases;
-	产看当前使用的数据库：select database();
-	修改数据库：alter database 数据库名 character set 新字符集；
-	删除数据库：drop database 数据库名；
-	切换数据库：use 数据库名；
-*/
+DDL：
+	库相关：
+		创建数据库：create database   数据库名;
+						create database 数据库名  character set 字符集;
+		查看所有数据库：show databases;
+		产看当前使用的数据库：select database();
+		修改数据库：alter database 数据库名 character set 新字符集;
+		删除数据库：drop database 数据库名;
+		切换数据库：use 数据库名;
+	表相关：
+		增删表：
+			创建表：create table 表名(
+						字段名 类型(长度) 约束,
+						字段名 类型(长度) 约束,
+						字段名 类型(长度) 约束,
+						);
+			查看数据库中的所有表：show tables;
+			查看表结构：desc 表名;
+			表的删除：drop table 表名;
+		表的修改：
+			修改表添加列：alter table 表名 add 列名 类型(长度) 约束;
+			修改表删除列：alter table 表名 drop 列名;
+			修改表的列的类型长度及约束：alter table 表名 modify 列名 类型(长度) 约束; 约束;
+			修改表的列名：alter table 表名 change 旧列名 新列名 类型(长度) 约束;
+			修改表名：rename table 旧表名 to 新表名;
+			修改表的字符集：alter table 表名 character set 字符集;
