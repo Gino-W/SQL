@@ -1,3 +1,4 @@
+
 CREATE DATABASE mybase;
 CREATE DATABASE mybase_1 CHARACTER SET UTF8;
 SHOW DATABASES;
@@ -34,3 +35,9 @@ examALTER TABLE exam CHANGE mysql_c mysql_b INT NOT NULL;
 RENAME TABLE exam TO exam1;
 ALTER  TABLE exam CHARACTER SET UTF8;
 ALTER TABLE exam DROP mysql_b;
+
+
+INSERT INTO exam(Id,name,english,chinese,math) VALUES(2,'张三',70,99,99);
+INSERT INTO exam(Id,name,english,chinese) VALUES(null,'张三',70,99);
+INSERT INTO exam VALUES(5,'李四',90,90,90);
+ UPDATE exam SET name ='王五' WHERE Id=3;
