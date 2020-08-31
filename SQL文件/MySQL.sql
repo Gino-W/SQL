@@ -33,3 +33,4 @@ ALTER TABLE exam MODIFY mysql_c DOUBLE(7,2);
 examALTER TABLE exam CHANGE mysql_c mysql_b INT NOT NULL;
 RENAME TABLE exam TO exam1;
 ALTER  TABLE exam CHARACTER SET UTF8;
+ALTER TABLE exam DROP mysql_b;

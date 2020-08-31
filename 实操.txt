@@ -1,4 +1,12 @@
-DDL：
+SQL(Structured QUERY LANGUAGE)：结构化查询语言
+SQL是在关系数据库上执行数据操作、检索以及维护所使用的的标准语言，可以用来查询数据，操纵数据，定义数据，控制数据
+SQL可以分为：
+	数据定义语言(DDL)：Data Definition Language
+	数据操纵语言(DML)：Data Manipulation language
+	事务控制语言(TCL)：Transaction Control Language
+	数据查询语言(DQL)：Data QUERY Language
+	数据控制语言(DCL)：Data Control Language
+DDL(数据定义语言 CREATE ALTER DROP)：
 	库相关：
 		创建数据库：create database   数据库名;
 						create database 数据库名  character set 字符集;
@@ -24,3 +32,9 @@ DDL：
 			修改表的列名：alter table 表名 change 旧列名 新列名 类型(长度) 约束;
 			修改表名：rename table 旧表名 to 新表名;
 			修改表的字符集：alter table 表名 character set 字符集;
+DML(数据操作语言 UPDATE INSERT DELETE)：
+	插入记录(字符串和日期类型要有'')
+		插入部分列：insert INTO 表名 (列名,列名,...) VALUES (值一,值二,...);
+		插入所有列：insert INTO 表名 VALUES (值一,值二,...);
+		修改记录：update 表 SET 列名=值,列名=值[WHERE 条件];
+		删除记录：delete FROM 表 [WHERE 条件];
