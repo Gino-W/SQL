@@ -38,3 +38,16 @@ DML(数据操作语言 UPDATE INSERT DELETE)：
 		插入所有列：insert INTO 表名 VALUES (值一,值二,...);
 		修改记录：update 表 SET 列名=值,列名=值[WHERE 条件];
 		删除记录：delete FROM 表 [WHERE 条件];
+		
+		delete与truncate
+			删除表中的所有记录 (truncate table 表名) 和 (delete FROM 表) 区别：
+			truncate table 删除表的记录：将整个表删除掉，重新创建一个新的表。truncate属于DDL。
+			delete from 删除表的结构：一条一条进行删除。delete属于DML。事务管理只能作用在DML语句上。如果在一个事务中使用delete删除所有记录，可以找回             
+DCL(数据控制语言 GRANT REVOKE)：
+		创建用户：create user 用户名@ip identified by 密码;
+		给用户授权：grant 权限一,权限二,..., 权限n on 数据库名.* to 用户名@ip;
+		撤销授权：revoke 权限一,权限二,..., 权限n on 数据库名.* from 用户名@ip;
+		查看用户的权限：show grants for 用户名@ip;
+		删除用户：drop user 用户名@ip;
+		登录：mysql -u用户名@ip;
+		退出登录：exit;                                       

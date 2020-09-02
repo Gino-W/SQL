@@ -40,4 +40,9 @@ ALTER TABLE exam DROP mysql_b;
 INSERT INTO exam(Id,name,english,chinese,math) VALUES(2,'张三',70,99,99);
 INSERT INTO exam(Id,name,english,chinese) VALUES(null,'张三',70,99);
 INSERT INTO exam VALUES(5,'李四',90,90,90);
- UPDATE exam SET name ='王五' WHERE Id=3;
+UPDATE exam SET name ='王五' WHERE Id=3;
+
+
+DELETE FROM exam;
+
+TRUNCATE TABLE exam;
